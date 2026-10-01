@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(235, 18%, 28%);
+  font-family: Arial, sans-serif;
+}
+
+.newsletter {
+  width: min(900px, 90%);
+  min-height: 600px;
+  display: flex;
+  background: white;
+  border-radius: 30px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.newsletter-content {
+  width: 50%;
+  padding: 55px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsletter-content h1 {
+  font-size: 52px;
+  line-height: 1;
+  white-space: nowrap;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 24px;
+}
+
+.newsletter-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsl(235, 18%, 26%);
+  margin-bottom: 20px;
+}
+
+.newsletter-content ul {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.newsletter-content li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: hsl(235, 18%, 26%);
+  margin-bottom: 12px;
+}
+
+.newsletter-content li img {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+.newsletter-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-content label {
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 8px;
+}
+
+.newsletter-content input {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  border: 1px solid hsl(0, 0%, 58%);
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.newsletter-content button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background: hsl(4, 100%, 67%);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.newsletter-image {
+  width: 50%;
+}
+
+.newsletter-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+@media (max-width: 767px) {
+  body {
+    display: block;
+    background: white;
+  }
+
+  .newsletter {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .newsletter-image {
+    width: 100%;
+    height: 284px;
+  }
+
+  .newsletter-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 20px 20px;
+    object-fit: cover;
+  }
+
+  .newsletter-content {
+    width: 100%;
+    padding: 40px 24px;
+  }
+
+  .newsletter-content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    white-space: normal;
+  }
+
+  .newsletter-content p {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .newsletter-content ul {
+    margin-bottom: 36px;
+  }
+
+  .newsletter-content li {
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .newsletter-content li img {
+    margin-top: 2px;
+  }
+
+  .newsletter-content input,
+  .newsletter-content button {
+    height: 56px;
+  }
+}
+
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.label-row label {
+  margin-bottom: 0;
+}
+
+.label-row span {
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(4, 69%, 50%);
+}
+
+.newsletter-content input:focus {
+  outline: none;
+  border: 1px solid hsl(234, 29%, 20%);
+}
+
+.newsletter-content input.input-error {
+  border: 1px solid hsl(4, 69%, 50%);
+  background: hsl(4, 100%, 95%);
+  color: hsl(4, 69%, 50%);
+}
+
+.newsletter-content input.input-error::placeholder {
+  color: hsl(4, 69%, 50%);
+}
+
+.newsletter-content button:hover {
+  background: hsl(4, 100%, 67%);
+  box-shadow: 0 10px 25px rgba(255, 98, 87, 0.25);
+}
+
+.newsletter-content button:focus-visible {
+  outline: 3px solid hsl(4, 100%, 80%);
+  outline-offset: 2px;
+}
+
+/* Success page */
+
+.success-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(235, 18%, 28%);
+  padding: 24px;
+}
+
+.success-card {
+  width: min(430px, 100%);
+  background: white;
+  border-radius: 30px;
+  padding: 48px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.success-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 32px;
+}
+
+.success-card h1 {
+  font-size: 48px;
+  line-height: 1;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 24px;
+}
+
+.success-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsl(235, 18%, 26%);
+  margin-bottom: 32px;
+}
+
+.success-card p strong {
+  color: hsl(234, 29%, 20%);
+}
+
+.success-card button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background: hsl(234, 29%, 20%);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.success-card button:hover {
+  background: hsl(4, 100%, 67%);
+  box-shadow: 0 10px 25px rgba(255, 98, 87, 0.25);
+}
+
+
+.newsletter-content button {
+  background: hsl(234, 29%, 20%);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletter-content button:hover {
+  background: hsl(4, 100%, 67%);
+  box-shadow: 0 10px 25px rgba(255, 98, 87, 0.25);
+}
+
+/* Error state */
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-row span {
+  color: hsl(4, 69%, 50%);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.newsletter-content input.input-error {
+  border: 1px solid hsl(4, 69%, 50%);
+  background: hsl(4, 100%, 95%);
+  color: hsl(4, 69%, 50%);
+}
+
+.newsletter-content input.input-error::placeholder {
+  color: hsl(4, 69%, 50%);
+}
